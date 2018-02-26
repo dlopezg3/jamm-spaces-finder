@@ -1,24 +1,37 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :delete]
+
   def index
+    @bookings = Booking.all
   end
 
   def show
   end
 
   def create
+    @booking = Booking.new
+    if @booking.save
+      redirect_to booking_path
+    else
+      render :new
+    end
   end
 
   def new
+    @booking = Booking.new
   end
 
   def edit
   end
 
   def update
+    @booking.update(booking_params)
+    redirect_to bookings_path
   end
 
   def destroy
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   private
