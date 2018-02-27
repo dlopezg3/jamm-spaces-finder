@@ -1,14 +1,17 @@
 .footer {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
   background: white;
+  opacity: 0.4;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 40px;
+  justify-content: center;
+  height: 30px;
   padding: 0px 50px;
   color: rgba(0, 0, 0, 0.3);
   position: fixed;
   bottom:0;
+  left: 0;
+  right: 0;
   width:100%;
 }
 
@@ -16,13 +19,12 @@
   display: flex;
   align-items: center;
   a {
-    color: black;
-    opacity: 0.15;
+    color: #D93479;
     text-decoration: none;
     font-size: 24px;
     padding: 0px 10px;
     &:hover {
-      opacity: 1;
+      color: red;
     }
   }
 }
