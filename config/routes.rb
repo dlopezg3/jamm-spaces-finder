@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # changed root to spaces index:
   root to: 'spaces#index'
 
+  get 'spaces/search', to: 'spaces#search'
   resources :spaces do
     resources :bookings, only:[:index, :new, :create, :delete]
   end
   # uncomment this on master:
-  # get "search", in: "spaces#search"
 end
