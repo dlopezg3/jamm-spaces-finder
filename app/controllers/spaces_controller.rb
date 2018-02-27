@@ -1,8 +1,9 @@
 class SpacesController < ApplicationController
   before_action :set_space, only: [:show, :edit, :update, :delete]
+  skip_after_action :verify_authorized, only: :search
 
   def index
-    @spaces = Space.all
+    @spaces = policy_scope(Space.all)
   end
 
   def show
@@ -15,10 +16,12 @@ class SpacesController < ApplicationController
     else
       render :new
     end
+    authorize @space
   end
 
   def new
     @space = Space.new
+    authorize @space
   end
 
   def edit
@@ -42,6 +45,7 @@ class SpacesController < ApplicationController
 
   def set_space
     @space = Space.find(params[:id])
+    authorize @space
   end
 
   def space_params

@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "logojsp.png", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -11,12 +11,12 @@
 
       <!-- Links when logged in -->
       <%= link_to "Sessions", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Notifications", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/dlopezg3", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <div class="notification">1</div>
+        <div class="dropdown navbar-jammbox-avatar">
+          <%= image_tag "http://kitt.lewagon.com/placeholder/users/geebabygee", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>

@@ -12,12 +12,13 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes'  %>
+    <%= render 'shared/searchbar'  %>
     <%= yield %>
       <!--Le Wagonn templates for flash alerts -->
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
   </body>
 </html>

@@ -31,6 +31,6 @@ end
   price = (5..30).to_a.sample
   users = User.count
   user_id =  (1..users).to_a.sample
-  new_space = Space.new(name: name, country: country, city: city, address: address, price_per_hour: price, user_id: user_id)
+  new_space = Space.new(description: description, name: name, country: country, city: city, address: address, price_per_hour: price, user_id: user_id)
   new_space.save
 end
