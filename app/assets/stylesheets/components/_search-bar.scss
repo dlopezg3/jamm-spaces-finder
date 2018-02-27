@@ -15,7 +15,7 @@ body{
   opacity: 0.9;
   border-radius: 50px;
   width: 400px;
-  height: 80px;
+  height: 60px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ body{
 .search-pink-rectangule {
   position: relative;
   width: 31px;
-  height: 80px;
+  height: 60px;
   background: #D93479;
   left: 199px;
   display: flex;
@@ -37,7 +37,7 @@ body{
 .search-pink-circle {
   position: relative;
   width: 60px;
-  height: 80px;
+  height: 60px;
   background: #D93479;
   border-radius: 0px 50px 50px 0;
   left: 64px;
@@ -56,5 +56,7 @@ body{
 .search-arrow {
   position: relative;
   color: white;
-  font-size:40px;
+  font-size:60px;
+  z-index: 10;
+  left: 18px;
 }
