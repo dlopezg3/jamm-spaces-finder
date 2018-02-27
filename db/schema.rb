@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226193612) do
+ActiveRecord::Schema.define(version: 20180227114417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,11 +32,9 @@ ActiveRecord::Schema.define(version: 20180226193612) do
     t.datetime "updated_at", null: false
     t.decimal "price_per_hour"
     t.string "image_url"
-    t.bigint "space_id"
     t.bigint "user_id"
     t.string "city"
     t.string "country"
-    t.index ["space_id"], name: "index_spaces_on_space_id"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
@@ -57,6 +55,5 @@ ActiveRecord::Schema.define(version: 20180226193612) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "spaces", "spaces"
   add_foreign_key "spaces", "users"
 end
