@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new
+    authorize @booking
     if @booking.save
       redirect_to booking_path
     else
@@ -19,6 +20,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def edit
