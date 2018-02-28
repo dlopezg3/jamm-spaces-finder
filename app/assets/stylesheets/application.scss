@@ -13,3 +13,7 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+.page {
+  min-height: calc(100vh - 50px) ;
+}
