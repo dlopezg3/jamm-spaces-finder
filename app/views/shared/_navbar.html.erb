@@ -1,4 +1,5 @@
-<div class="navbar-wagon navbar-fixed-top">
+<div class="navbar-wagon navbar-fixed-top <%=
+(controller_name = "spaces" && action_name == "index") ? "" : "navbar-wagon-white" %> ">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logojsp.png", height: 50 %>

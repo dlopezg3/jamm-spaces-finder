@@ -1,18 +1,23 @@
+<div class="search-box">
 
-<%= form_tag spaces_search_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a place to jamm" %>
-<% end %>
-
-
-<div class="results">
-  <div
-    id="map"
-    data-markers="<%= @markers.to_json %>"
-  ></div>
-  <div class="cards" id="cardsinsearch">
-    <%= render 'shared/cards' %>
-  </div>
+  <%= form_tag spaces_search_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a place to jamm" %>
+  <% end %>
 </div>
+
+<div class="search-content">
+  <div class="results">
+    <div class="col-xs-4"
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
+    <div class="cards col-xs-8" id="cardsinsearch">
+      <%= render 'shared/cards' %>
+    </div>
+  </div>
+
+</div>
+
