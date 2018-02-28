@@ -3,14 +3,11 @@
     <div class="text-center">
       <h2> <%= @space.name  %> </h2>
     </div>
-
-    <div class="col-sm-4 col-sm-offset-4">
       <%= simple_form_for [@space, @booking] do |f| %>
         <%= f.input :start_time, as: :datetime, discard_minute: true, order: [:month, :day] %>
-        <%= f.input :duration, input_html: { value: '1' },  class: "form-inline" %>
+        <%= f.input :duration, input_html: { value: '1' },  class: "" %>
         <%= f.submit "Book the space", class: "btn btn-danger" %>
       <% end %>
-    </div>
   </div>
 </div>
 
