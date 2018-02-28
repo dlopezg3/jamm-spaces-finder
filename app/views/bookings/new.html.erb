@@ -1,2 +1,16 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="text-center">
+      <h2> <%= @space.name  %> </h2>
+    </div>
+
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= simple_form_for [@space, @booking] do |f| %>
+        <%= f.input :start_time, as: :datetime, discard_minute: true, order: [:month, :day] %>
+        <%= f.input :duration, input_html: { value: '1' },  class: "form-inline" %>
+        <%= f.submit "Book the space", class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
