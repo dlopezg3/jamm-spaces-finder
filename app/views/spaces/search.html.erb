@@ -9,5 +9,13 @@
   %>
 <% end %>
 
-<%= render 'shared/cards' %>
+<div class="results">
+  <div
+    id="map"
 
+    data-markers="<%= @markers.to_json %>"
+  ></div>
+  <div class="cards">
+    <%= render 'shared/cards' %>
+  </div>
+</div>
