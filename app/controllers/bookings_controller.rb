@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
   before_action :set_space, only: [ :new, :create ]
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking.where(user: current_user))
   end
 
   def show
@@ -20,7 +20,9 @@ class BookingsController < ApplicationController
     @booking.space = @space
     @booking.user = current_user
     authorize @booking
-    byebug
+    @price_hour = @space.price_per_hour
+    @total_price = @price_hour * @booking.duration
+    @booking.total_price = @total_price.to_i
 
     if @booking.save
       redirect_to space_booking_path(@space, @booking)
