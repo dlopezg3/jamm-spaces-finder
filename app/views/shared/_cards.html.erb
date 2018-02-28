@@ -30,7 +30,7 @@
           <span class="card-media-body-supporting-bottom-text subtle u-float-right">$<%= space.price_per_hour.to_i %> per hour</span>
         </div>
         <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-          <a href='<%= space.id %>' class="card-media-body-supporting-bottom-text card-media-link u-float-right">BOOK IT</a>
+          <%= link_to "More Info", space_path(space), class: "card-media-body-supporting-bottom-text card-media-link u-float-right" %>
         </div>
       </div>
     </div>
