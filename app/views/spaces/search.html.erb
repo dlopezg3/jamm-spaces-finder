@@ -10,11 +10,11 @@
 
 <div class="search-content">
   <div class="results">
-    <div class="col-xs-4"
+    <div style="float: left"
       id="map"
       data-markers="<%= @markers.to_json %>"
     ></div>
-    <div class="cards col-xs-8" id="cardsinsearch">
+    <div style="float: right" id="cardsinsearch">
       <%= render 'shared/cards' %>
     </div>
   </div>
