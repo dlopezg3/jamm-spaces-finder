@@ -3,11 +3,15 @@
 }
 
 #map {
-  flex: 0 0 350px;
-  height: 80vh;
+  flex: 1 1 500px;
+  height: 90vh;
   width: 50%;
   position: sticky !important;
-  top: 10px !important;
+  top: 20px !important;
   left: 0px;
   margin: 10px;
+}
+
+#cardsinsearch {
+  flex: 1 0 auto;
 }
