@@ -9,8 +9,8 @@
 
 require 'faker'
 
-User.delete_all
 Space.delete_all
+User.delete_all
 
 # USER
 100.times do
