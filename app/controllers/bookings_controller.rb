@@ -21,7 +21,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
 
-    byebug
     if @booking.save
       redirect_to space_booking_path(@space, @booking)
     else
