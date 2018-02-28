@@ -22,7 +22,7 @@ class SpacesController < ApplicationController
   end
 
   def create
-    @space = Space.new
+    @space = Space.new(space_params)
     if @space.save
       redirect_to spaces_path
     else
@@ -71,6 +71,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:name, :address, :description, :instruments)
+    params.require(:space).permit(:name, :address, :description)
   end
 end
