@@ -3,7 +3,19 @@ class SpacesController < ApplicationController
   skip_after_action :verify_authorized, only: :search
 
   def index
-    @spaces = policy_scope(Space.all)
+    @spaces = policy_scope(Space.where.not(latitude: nil, longitude: nil))
+
+    #### CODE FOR GEOCODING
+
+    @markers = @spaces.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/spaces/map_box", locals: { flat: flat }) }
+      }
+    end
+
+    ##### END OF CODE FOR GEOCODING
   end
 
   def show
