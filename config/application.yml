@@ -10,3 +10,5 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 CLOUDINARY_URL: "cloudinary://734858712273467:yZSye2nvfhKtSF38Vk0upVbRRFU@jamm-boxx"
+GOOGLE_API_SERVER_KEY: AIzaSyBdFLZaGn4P7-5zQsRSEslZKlqRGvRxpY8
+GOOGLE_API_BROWSER_KEY: AIzaSyBH4u4-I6Qbn2rSEKmenA3UrsSC2LltJF8
