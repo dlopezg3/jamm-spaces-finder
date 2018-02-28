@@ -1,17 +1,32 @@
+.search-box {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+}
+
+.search-content {
+  position: fixed;
+  top: 89px;
+  height: calc(100vh - 89px);
+  width: 100%;
+  padding: 10px;
+}
+
 .results {
   display: flex;
+  height: calc(100vh - 89px);
+  width: 100%;
 }
 
 #map {
   flex: 1 1 500px;
-  height: 90vh;
+  height: calc(90vh - 89px);
   width: 50%;
   position: sticky !important;
-  top: 20px !important;
   left: 0px;
-  margin: 10px;
 }
 
 #cardsinsearch {
   flex: 1 0 auto;
+  overflow-y: scroll;
 }
