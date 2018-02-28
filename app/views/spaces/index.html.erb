@@ -1,15 +1,9 @@
 <%= render 'shared/banner' %>
-<div class="results">
-  <div
-    id="map"
-    style="width: 40%;
-    height: 100vh;"
-    data-markers="<%= @markers.to_json %>"
-  ></div>
-  <div class="cards">
-    <%= render 'shared/cards' %>
-  </div>
+
+<div class="cards">
+  <%= render 'shared/cards' %>
 </div>
+
 
 <br>
 <p>

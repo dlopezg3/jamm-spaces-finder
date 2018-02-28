@@ -1,0 +1,13 @@
+.results {
+  display: flex;
+}
+
+#map {
+  flex: 0 0 350px;
+  height: 80vh;
+  width: 50%;
+  position: sticky !important;
+  top: 10px !important;
+  left: 0px;
+  margin: 10px;
+}
