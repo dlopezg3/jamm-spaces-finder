@@ -44,10 +44,8 @@ class SpacesController < ApplicationController
 
   def search
     @spaces = policy_scope(Space.where.not(latitude: nil, longitude: nil))
-
-    # country
     if params[:query].present?
-      @spaces = Space.where(country: params[:query])
+        @spaces = Space.near(params[:query], 30)
     end
 
     @markers = @spaces.map do |space|
@@ -57,9 +55,6 @@ class SpacesController < ApplicationController
         # infoWindow: { content: render_to_string(partial: "/spaces/map_box", locals: { flat: flat }) }
       }
     end
-    # if params[:price_per_hour] = #user_query (same unit as database)
-      # @spaces = @spaces.where #active record matches query
-    # end
   end
 
 
