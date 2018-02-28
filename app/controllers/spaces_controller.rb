@@ -38,6 +38,16 @@ class SpacesController < ApplicationController
   end
 
   def search
+    @spaces = Space.all
+
+    # country
+    if params[:query].present?
+      @spaces = Space.where(country: params[:query])
+    end
+
+    # if params[:price_per_hour] = #user_query (same unit as database)
+      # @spaces = @spaces.where #active record matches query
+    # end
   end
 
 

@@ -1,3 +1,13 @@
 <h1>search.html.erb</h1>
 <h1>hello from search</h1>
 
+<%= form_tag spaces_search_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a place to jamm"
+  %>
+<% end %>
+
+<%= render 'shared/cards' %>
+
