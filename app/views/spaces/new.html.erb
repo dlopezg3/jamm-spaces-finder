@@ -1,10 +1,12 @@
 <h2>Creating a new space</h2>
 
-<%= simple_form_for @space do |f| %>
-  <%= f.input :name, label: 'Name here please:' %>
-  <%= f.input :city, label: 'City here please:' %>
-  <%= f.input :country, :as => :string, label: 'Country here please:' %>
-  <%= f.input :address, label: 'Address here please:' %>
-  <%= f.input :description, label: 'Description here please:' %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+      <%= simple_form_for @space do |f| %>
+        <%= f.input :name, label: 'Name here please:' %>
+        <%= f.input :address, label: 'Address here please:' %>
+        <%= f.input :description, label: 'Description here please:' %>
+        <%= f.submit "Book the space", class: "btn btn-danger" %>
+      <% end %>
+  </div>
+</div>
