@@ -1,11 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h1>Space #<%= @space.id %></h1>
-        <p>
-          <strong>Name:</strong>
-          <%= @space.name %>
-        </p>
+      <h1><%=@space.name %></h1>
         <p>
           <strong>Address:</strong>
           <%= @space.address %>
@@ -16,7 +12,7 @@
         </p>
     </div>
     <div class="col-sm-6">
-      <%= link_to "Book this space", new_space_booking_path(@space), class: "btn btn-danger" %>
+      <%= link_to "Book this space", new_space_booking_path(@space), class: "btn btn-danger book-it-btn" %>
     </div>
   </div>
 </div>
