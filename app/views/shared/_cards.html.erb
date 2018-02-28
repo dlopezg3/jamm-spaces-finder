@@ -1,6 +1,6 @@
 
 <div class="container">
-<p> Path: views/shared/_cards for html and assets/stylesheets/components/_cards for css </p>
+
 
 <% @spaces.each do |space| %>
   <div class="card-media">
@@ -24,13 +24,13 @@
           </svg>
         </div>
       </div>
-      <span class="card-media-body-heading"><%= space.description %></span>
-      <div class="card-media-body-supporting-bottom">
-        <span class="card-media-body-supporting-bottom-text subtle-bottom"><%= space.city %>, <%= space.address %></span>
+       <span class="card-media-body-heading"><%= space.description %></span>
+     <div class="card-media-body-supporting-bottom">
+        <span class="card-media-body-supporting-bottom-text subtle-bottom"> <%= space.address %></span>
         <span class="card-media-body-supporting-bottom-text subtle u-float-right">$<%= space.price_per_hour.to_i %> per hour</span>
       </div>
       <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-        <a href="#/" class="card-media-body-supporting-bottom-text card-media-link u-float-right"><%= link_to "INFO", space %></a>
+        <a href='<%= space.id %>' class="card-media-body-supporting-bottom-text card-media-link u-float-right">BOOK IT</a>
       </div>
     </div>
   </div>

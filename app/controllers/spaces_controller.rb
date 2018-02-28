@@ -7,13 +7,6 @@ class SpacesController < ApplicationController
 
     #### CODE FOR GEOCODING
 
-    @markers = @spaces.map do |space|
-      {
-        lat: space.latitude,
-        lng: space.longitude#,
-        # infoWindow: { content: render_to_string(partial: "/spaces/map_box", locals: { flat: flat }) }
-      }
-    end
 
     ##### END OF CODE FOR GEOCODING
   end
@@ -22,7 +15,7 @@ class SpacesController < ApplicationController
   end
 
   def create
-    @space = Space.new
+    @space = Space.new(space_params)
     if @space.save
       redirect_to spaces_path
     else
@@ -50,16 +43,18 @@ class SpacesController < ApplicationController
   end
 
   def search
-    @spaces = Space.all
-
-    # country
+    @spaces = policy_scope(Space.where.not(latitude: nil, longitude: nil))
     if params[:query].present?
-      @spaces = Space.where(country: params[:query])
+        @spaces = Space.near(params[:query], 30)
     end
 
-    # if params[:price_per_hour] = #user_query (same unit as database)
-      # @spaces = @spaces.where #active record matches query
-    # end
+    @markers = @spaces.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/spaces/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
 
@@ -71,6 +66,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:name, :address, :description, :instruments)
+    params.require(:space).permit(:name, :address, :description)
   end
 end

@@ -19,10 +19,11 @@
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
     </div>
-    <%= render 'shared/footer' %>
+    <%= render 'shared/footer' unless action_name == "search" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_pack_tag "map" %>
+    <%= yield :after_js %>
   </body>
 </html>
