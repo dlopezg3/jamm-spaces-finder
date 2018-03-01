@@ -6,7 +6,6 @@ class SpacePolicy < ApplicationPolicy
   end
 
   def index?
-    byebug
     true
   end
 
