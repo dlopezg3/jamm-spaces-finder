@@ -5,6 +5,11 @@ class SpacePolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    byebug
+    true
+  end
+
   def create?
     true
   end

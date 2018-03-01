@@ -18,10 +18,13 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# Dan Gems
 gem 'devise'
 gem 'faker'
-gem 'pundit'
 gem "geocoder"
+
+gem 'pundit'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
