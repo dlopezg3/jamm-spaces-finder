@@ -128,10 +128,11 @@ address_array = ["8 Nugent Rd, London N19 3QF, UK",
   name = Faker::Commerce.department
   description = lorem
   address = address_array.sample
-  price = (5..30).to_a.sample
-  users = User.count
-  user_id =  (1..users).to_a.sample
-  Space.create(description: description, name: name, address: address, price_per_hour: price, user_id: user_id)
+  price = (1..30).to_a.sample
+  first_user = User.first.id
+  last_user = User.last.id
+  user_id =  (first_user..last_user).to_a.sample
+  new_space = Space.create(description: description, name: name, address: address, price_per_hour: price, user_id: user_id)
 end
 
 

@@ -4,12 +4,6 @@
   <%= render 'shared/cards' %>
 </div>
 
-
-<br>
-<p>
-  <%= link_to "Add a space", new_space_path, class: "btn btn-danger" %>
-</p>
-
 <% content_for :after_js do %>
   <%= javascript_pack_tag "home" %>
 <% end %>

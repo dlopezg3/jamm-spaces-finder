@@ -1,8 +1,11 @@
-<h1>Your Bookings</h1>
 
-<% @bookings.each do |book| %>
-  <div class="cards">
-    <%= book.space.name %>
-    <%= book.start_time %>
-  </div>
-<% end %>
+<div class="container show-container">
+  <h1>Your Bookings</h1>
+
+  <% @bookings.each do |book| %>
+    <div class="cards">
+      <%= book.space.name %>
+      <%= book.start_time %>
+    </div>
+  <% end %>
+</div>
