@@ -1,11 +1,27 @@
 
 <div class="container show-container">
-  <h1>Your Bookings</h1>
-
-  <% @bookings.each do |book| %>
-    <div class="cards">
-      <%= book.space.name %>
-      <%= book.start_time %>
-    </div>
-  <% end %>
+  <h1>Hello <strong><%= current_user.email %></strong>!</h1>
+  <h3>Check out your bookings:</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Space name</th>
+        <th>Start time</th>
+        <th>End time</th>
+        <th>Total price</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.space.name %></td>
+        <td><%= booking.start_time %></td>
+        <td><%= booking.end_time %></td>
+        <td><%= booking.total_price %></td>
+        <td><%= link_to "Info", @space, class: "btn btn-info" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
