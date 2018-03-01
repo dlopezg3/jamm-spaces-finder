@@ -3,11 +3,11 @@
   <h1>Hello <strong><%= current_user.email %></strong>!</h1>
   <h3>Check out your bookings:</h3>
   <table class="table">
-    <thead>
+    <thead>end
       <tr>
         <th>Space name</th>
         <th>Start time</th>
-        <th>End time</th>
+        <th>Duration</th>
         <th>Total price</th>
         <th colspan="3"></th>
       </tr>
@@ -17,9 +17,9 @@
       <tr>
         <td><%= booking.space.name %></td>
         <td><%= booking.start_time %></td>
-        <td><%= booking.end_time %></td>
+        <td><%= booking.duration %></td>
         <td><%= booking.total_price %></td>
-        <td><%= link_to "Info", @space, class: "btn btn-info" %></td>
+        <td><%= link_to "Info", space_path(booking.space), class: "btn btn-info" %></td>
       </tr>
       <% end %>
     </tbody>
