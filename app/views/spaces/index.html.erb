@@ -1,13 +1,16 @@
 <%= render 'shared/banner' %>
 
 <div class="huge-container">
-  <div class="cards">
-    <h1> Featured :</h1>
-    <hr>
-    <%= render 'shared/cards' %>
+  <div class="small-container">
+    <div class="cards">
+      <h1> Featured :</h1>
+      <hr>
+      <%= render 'shared/cards' %>
+    </div>
+      <% content_for :after_js do %>
+        <%= javascript_pack_tag "home" %>
+      <% end %>
+
   </div>
-    <% content_for :after_js do %>
-      <%= javascript_pack_tag "home" %>
-    <% end %>
-  </div>
+</div>
 <%= render 'shared/footer' unless action_name == "search" %>

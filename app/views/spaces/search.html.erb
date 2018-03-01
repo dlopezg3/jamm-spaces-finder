@@ -10,12 +10,12 @@
 
 <div class="search-content">
   <div class="results">
-    <div
+    <div class="hidden-xs"
       id="map"
       data-markers="<%= @markers.to_json %>">
 
       </div>
-    <div class="col-xs-12 col-sm-12 col-md-3" id="cardsinsearch">
+      <div class="col-xs-12 col-sm-12 col-md-2" id="cardsinsearch">
       <%= render 'shared/cards' %>
     </div>
   </div>
