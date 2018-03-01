@@ -8,14 +8,19 @@
 .booking-form {
   grid-row: 1 / span 2;
   grid-column: 3 / span 1;
-  background-color: #FFF;
+  background-color: black;
+  color: white;
+  border: 1px white solid;
+  padding: 20px;
   margin: 5px;
 }
 
 .description {
   grid-row: 1 / span 1;
   grid-column: 1 / span 2;
-  background-color: #FFF;
+  background-color: black;
+  color: white;
+  border: 1px white solid;
   padding: 20px;
   margin: 5px;
 }
