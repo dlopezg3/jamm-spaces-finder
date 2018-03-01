@@ -6,7 +6,8 @@
       <div class="card__content">
         <div class="card__title"><%= space.name %></div>
         <p class="card__text"><%= space.description %> <br> <%= space.address %> $<%= space.price_per_hour.to_i %>/h</p>
-        <a class="btn btn--block card__btn" href="spaces/<%= space.id %>">more info</a>
+
+        <%= link_to "more info", space_path(space), class: "btn btn--block card__btn" %>
       </div>
     </div>
   </li>
