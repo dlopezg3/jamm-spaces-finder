@@ -16,7 +16,7 @@ User.delete_all
 100.times do
  email = Faker::Internet.email
  password = '123456'
- new_user = User.create(email: email, password: password)
+ User.create(email: email, password: password)
 end
 
 # Space
@@ -128,7 +128,7 @@ address_array = ["8 Nugent Rd, London N19 3QF, UK",
   name = Faker::Commerce.department
   description = lorem
   address = address_array.sample
-  price = (5..30).to_a.sample
+  price = (1..30).to_a.sample
   first_user = User.first.id
   last_user = User.last.id
   user_id =  (first_user..last_user).to_a.sample
