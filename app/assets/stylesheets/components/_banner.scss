@@ -28,3 +28,16 @@
   width: 50%;
   border-radius: 30px;
 }
+
+.banner-show {
+  height: calc(50vh - 50px);
+  justify-content: space-between;
+  background-position: center;
+  position: relative;
+
+    h1 {
+      position: absolute;
+      bottom: 5px;
+      left: 40px;
+    }
+}

@@ -1,18 +1,71 @@
-<div class="container">
+<div class="banner banner-show" style="background-image: url('<%= image_url("flat.jpg") %>');">
+  <div class="banner-content">
+    <h1><%=@space.name %></h1>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="map"
+      id="map" style="width: 100%;"
+      data-markers="<%= @markers.to_json %>">
+  </div>
+  <div class="description">
+    <p>
+      <strong>Address:</strong>
+      <br>
+      <%= @space.address %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <br>
+      <%= @space.description %>
+    </p>
+  </div>
+  <div class="booking-form">
+    <%= link_to "Book this space", new_space_booking_path(@space), class: "btn btn-danger book-it-btn" %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+<div class="big-container grid">
+
   <div class="row show-container">
-    <div class="col-sm-6">
-      <h1><%=@space.name %></h1>
+    <div>
         <p>
           <strong>Address:</strong>
+          <br>
           <%= @space.address %>
         </p>
         <p>
           <strong>Description:</strong>
+          <br>
           <%= @space.description %>
         </p>
     </div>
-    <div class="col-sm-6">
+    <div>
       <%= link_to "Book this space", new_space_booking_path(@space), class: "btn btn-danger book-it-btn" %>
     </div>
   </div>
+
+  <div class="mapy-container">
+    <div
+      id="map" style="width: 100%;"
+      data-markers="<%= @markers.to_json %>">
+    </div>
+  </div>
+
 </div>
+ -->

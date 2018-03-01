@@ -12,6 +12,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+
   end
 
   def create

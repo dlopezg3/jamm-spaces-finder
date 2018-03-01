@@ -1,4 +1,22 @@
 .show-container {
-  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+  text-align: center;
   color: white;
+    p {
+      font-weight: lighter;
+    }
+  padding: 0px;
+
+}
+
+
+.mapy-container {
+  width: 100%;
+}
+
+.big-container {
+  margin-left: 50px;
+  margin-right: 50px;
 }
