@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # changed root to spaces index:
   root to: 'spaces#index'
+  devise_for :users
 
   get 'spaces/search', to: 'spaces#search'
   resources :spaces do
