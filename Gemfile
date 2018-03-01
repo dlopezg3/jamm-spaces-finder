@@ -8,8 +8,6 @@ gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
 
-gem 'cloudinary'
-
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -22,6 +20,7 @@ gem 'webpacker'
 gem 'devise'
 gem 'faker'
 gem "geocoder"
+gem 'cloudinary'
 
 gem 'pundit'
 
