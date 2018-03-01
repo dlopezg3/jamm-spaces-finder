@@ -14,6 +14,15 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
+    @spaces = policy_scope(Space.where(latitude: @space.latitude, longitude: @space.longitude))
+    @markers = @spaces.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/spaces/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def create
