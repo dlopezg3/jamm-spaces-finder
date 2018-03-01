@@ -9,7 +9,7 @@
   top: 89px;
   height: calc(100vh - 89px);
   width: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 
 .results {
@@ -19,7 +19,7 @@
 }
 
 #map {
-  flex: 1 1 500px;
+  flex: 0 0 500px;
   height: calc(90vh - 89px);
   width: 50%;
   position: sticky !important;

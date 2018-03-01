@@ -1,7 +1,4 @@
 <%= render 'shared/banner' %>
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
-
 
 <div class="cards">
   <%= render 'shared/cards' %>
@@ -16,3 +13,4 @@
 <% content_for :after_js do %>
   <%= javascript_pack_tag "home" %>
 <% end %>
+    <%= render 'shared/footer' unless action_name == "search" %>
