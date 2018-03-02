@@ -8,17 +8,18 @@
 </div>
 
 
-<div class="search-content">
+<div class="search-content" class="banner" style="align-items: center; background-image:  url('<%= image_url("banner2.jpg") %>');">
   <div class="results">
-    <div class="hidden-xs"
+    <div class="hidden-xs hidden-sm"
       id="map"
       data-markers="<%= @markers.to_json %>">
 
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-2" id="cardsinsearch">
+      <div class="col-xs-12 col-sm-6 col-md-6" id="cardsinsearch">
       <%= render 'shared/cards' %>
     </div>
   </div>
 </div>
+
 
 

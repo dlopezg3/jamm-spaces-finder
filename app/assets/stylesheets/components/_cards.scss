@@ -28,8 +28,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-
-  padding: 0;
+  padding: 3px 5px;
 }
 
 .cards__item {
@@ -68,6 +67,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 1px solid #D93479;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   filter: contrast(70%);
@@ -87,14 +87,6 @@ img {
   &:nth-child(3) {
     transition-delay: 150ms;
   }
-}
-
-.card-media-object-social-list-item-additional {
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 12px;
-  padding-top: 7px;
-  text-align: center;
 }
 
 .card-media-body {
@@ -132,17 +124,6 @@ img {
   }
 }
 
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
-}
-
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
-}
-
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
-}
 
 .card__image--fence {
   background-image: url(https://unsplash.it/800/600?image=59);

@@ -9,7 +9,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+.lol {
+  position: absolute;
+  font-weight:lighter;
+  right: 80px;
+  bottom: 395px;
+}
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
