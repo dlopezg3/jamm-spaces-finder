@@ -2,6 +2,7 @@ class SpacesController < ApplicationController
   before_action :set_space, only: [:show, :edit, :update, :delete]
   skip_after_action :verify_authorized, only: :search
   skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
+  layout 'landing', only: [:index]
 
 
   def index
