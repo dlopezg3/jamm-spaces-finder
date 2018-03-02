@@ -8,7 +8,7 @@
 
 
 require 'faker'
-
+Booking.delete_all
 Space.delete_all
 User.delete_all
 
@@ -16,7 +16,7 @@ User.delete_all
 100.times do
  email = Faker::Internet.email
  password = '123456'
- User.create(email: email, password: password)
+ User.create(email: email, password: password)PG::ForeignKeyViolation: ERROR
 end
 
 # Space
