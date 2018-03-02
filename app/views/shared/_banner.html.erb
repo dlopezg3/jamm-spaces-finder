@@ -1,7 +1,10 @@
 <div class="banner" style="align-items: center; background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0, #000 200%),  url('<%= image_url("banner2.jpg") %>');">
   <div class="banner-content">
-    <h1><%= image_tag "jambox.png", height: 150 %></h1>
-    <h2 class="lol">[space]</h2>
+    <div class="lol">
+      <h1><%= image_tag "jambox.png", height: 150 %></h1>
+      <h2>[space]</h2>
+
+    </div>
     <p>Rent unique places to play your next Jamm Sesh!</p>
 <h2>
       <%= form_tag spaces_search_path, method: :get do %>

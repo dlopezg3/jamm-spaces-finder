@@ -57,6 +57,7 @@ img {
 }
 
 .card__content {
+  position: relative;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -89,27 +90,6 @@ img {
   }
 }
 
-.card-media-body {
-  background-color: #fff;
-  float: left;
-  height: 100%;
-  padding: 12px 15px;
-  position: relative;
-  width: 65%;
-}
-
-
-.card-media-body-top {
-  display: block;
-}
-
-.card-media-body-top-icons {
-  margin-top: -2px;
-  opacity: 0;
-  transition: all 300ms ease-out;
-  transform: translateY(-5px);
-}
-
 .card-media:hover .card-media-body-top-icons {
   opacity: 1;
   transform: translateY(0);
@@ -124,17 +104,22 @@ img {
   }
 }
 
-
 .card__image--fence {
   background-image: url(https://unsplash.it/800/600?image=59);
 }
 
 .card__title {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+
   color: #696969;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: -16px;
 }
 
 .card__text {
