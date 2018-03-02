@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :delete]
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
   before_action :set_space, only: [ :new, :create ]
 
   def index
@@ -7,7 +7,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-    authorize @booking
   end
 
   def new
@@ -40,7 +39,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking.destroy
+    @booking.delete
     redirect_to bookings_path
   end
 
@@ -48,6 +47,7 @@ class BookingsController < ApplicationController
 
   def set_booking
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def booking_params

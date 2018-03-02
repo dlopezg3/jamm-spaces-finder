@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'spaces/search', to: 'spaces#search'
   resources :spaces do
-    resources :bookings, only:[:new, :create, :delete, :show]
+    resources :bookings, only:[:new, :create, :destroy, :show]
   end
 
   resources :bookings, only: [:index]
