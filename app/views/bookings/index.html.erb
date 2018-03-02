@@ -20,6 +20,7 @@
         <td><%= booking.duration %></td>
         <td><%= booking.total_price %></td>
         <td><%= link_to "Info", space_path(booking.space), class: "btn btn-info" %></td>
+        <td><%= link_to "Delete", space_booking_path(booking.space, booking), method: :delete, class: "btn btn-info" %></td>
       </tr>
       <% end %>
     </tbody>
