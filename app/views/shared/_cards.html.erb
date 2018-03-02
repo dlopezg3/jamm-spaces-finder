@@ -2,7 +2,7 @@
   <% @spaces.each do |space| %>
   <li class="cards__item">
     <div class="card">
-      <div class="card__image card__image--fence"></div>
+      <div class="card__image"> <%= cl_image_tag(space.image_url,width: 400, height: 300, crop: :fill) %> </div>
       <div class="card__content">
         <div class="card__title"><%= space.name %></div>
         <p class="card__text"><%= space.description %> <br> <%= space.address %> $<%= space.price_per_hour.to_i %>/h</p>
