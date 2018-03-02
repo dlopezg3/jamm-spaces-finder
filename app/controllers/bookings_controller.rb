@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
     @booking.total_price = @total_price.to_i
 
     if @booking.save
-      redirect_to space_booking_path(@space, @booking)
+      redirect_to bookings_path(@space, @booking)
     else
       render :new
     end
