@@ -19,7 +19,8 @@
 }
 
 #map {
-  flex: 0 0 500px;
+  flex: 0 0 150px;
+  flex-grow: 1;
   height: calc(90vh - 89px);
   width: 50%;
   position: sticky !important;
