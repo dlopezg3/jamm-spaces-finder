@@ -9,23 +9,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-.lol {
-  position: absolute;
-  font-weight:lighter;
-  right: 80px;
-  bottom: 395px;
 }
 
-.banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+.banner-content {
+}
+
+.lol {
+  position: relative;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    }
+    .h2 {
+      position: absolute;
+      font-weight:lighter;
+      right: 100px;
+      bottom: 0px;
+    }
     img{
       height: 150px;
     }
 }
+
 .banner p {
   font-size: 25px;
   font-weight: lighter;
@@ -44,7 +50,7 @@
   height: calc(50vh - 50px);
   justify-content: space-between;
   background-position: center;
-  position: relative;
+
 
     h1 {
       position: absolute;
