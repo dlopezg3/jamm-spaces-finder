@@ -28,6 +28,7 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.new(space_params)
+    @space.image_url = (1..23).to_a.sample.to_s
     if @space.save
       redirect_to spaces_path
     else
