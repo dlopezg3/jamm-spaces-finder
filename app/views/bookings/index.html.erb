@@ -6,9 +6,10 @@
     <thead>
       <tr>
         <th>Space name</th>
+        <th>Date</th>
         <th>Start time</th>
         <th>Duration</th>
-        <th>Total price</th>
+        <th>Price</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -16,9 +17,10 @@
       <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.space.name %></td>
-        <td><%= booking.start_time %></td>
+        <td><%= booking.start_time.strftime('%D') %></td>
+        <td><%= booking.start_time.strftime('%H') %></td>
         <td><%= booking.duration %></td>
-        <td><%= booking.total_price %></td>
+        <td><%= booking.total_price.to_i %>€</td>
         <td><%= link_to "Info", space_path(booking.space), class: "btn btn-info" %></td>
         <td><%= link_to "Delete", space_booking_path(booking.space, booking), method: :delete, class: "btn btn-info" %></td>
       </tr>
