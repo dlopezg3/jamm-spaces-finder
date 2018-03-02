@@ -109,21 +109,20 @@ img {
 
 .card__title {
   background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 3px black;
   width: 100%;
-
-  color: #696969;
+  color: white;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: white;
   position: absolute;
-  top: -16px;
+  top: -18px;
 }
 
 .card__text {
   flex: 1 1 auto;
-  font-size: 1rem;
+  font-size: 1.35rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
